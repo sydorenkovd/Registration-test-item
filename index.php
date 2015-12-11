@@ -2,6 +2,6 @@
 require_once 'core/init.php';
 
 $user = DB::connect();
-if(Session::exists('success')){
-    echo Session::flash('success');
+if(Session::exists('home')){
+    echo "<p><b>" . Session::flash('home') . "</b></p>";
 }

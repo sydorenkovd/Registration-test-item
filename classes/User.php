@@ -1,7 +1,18 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Виктор Сидоренко
- * Date: 09.12.2015
- * Time: 21:44
- */
+
+class User
+{
+    private $_db;
+
+    public function __construct($user = null)
+    {
+        $this->_db = DB::connect();
+    }
+
+    public function create($fields = [])
+    {
+        if (!$this->_db->insert('users', $fields)) {
+            throw new Exception('There was a problem creating account.');
+        }
+    }
+}
