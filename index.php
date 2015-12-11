@@ -1,4 +1,9 @@
 <?php
 require_once 'core/init.php';
 
-$db = DB::connect();
+$user = DB::connect()->get('users', ['username', '=', 'Bob']);
+if(!$user->count()){
+echo 'No user';
+} else {
+    echo 'Ok';
+}
