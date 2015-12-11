@@ -1,7 +1,2 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Виктор Сидоренко
- * Date: 09.12.2015
- * Time: 21:47
- */
+<h1>Page not found!</h1>
+<p><b>Would you like go to main <a href="index.php">page</a></b></p>
