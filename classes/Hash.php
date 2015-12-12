@@ -2,9 +2,9 @@
 
 class Hash
 {
-    public static function make($string, $salt = '')
+    public static function make($string)
     {
-        return hash('sha256', $string . $salt);
+        return hash('md5', $string);
     }
 
     public static function salt($length)

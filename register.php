@@ -27,12 +27,12 @@ if (Input::exists()) {
         ]);
         if ($validation->passed()) {
             $user = new User();
-            $salt = Hash::salt(32);
+//            $salt = Hash::salt(32);
             try {
                 $user->create([
                     'username' => Input::get('username'),
-                    'password' => Hash::make(Input::get('password'), $salt),
-                    'salt' => $salt,
+                    'password' => Hash::make(Input::get('password')),
+//                    'salt' => $salt,
                     'name' => Input::get('name'),
                     'joined' => date('Y-m-d H:i:s'),
                     'group' => 1
