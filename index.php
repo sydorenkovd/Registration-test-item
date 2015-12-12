@@ -12,6 +12,7 @@ if($user->isLoggedIn()){
 <ul>
     <li>You can <a href="logout.php">log out</a> here!</li>
     <li>You can <a href="update.php">update</a> your profile here!</li>
+    <li>You can <a href="changepassword.php">change password</a> here!</li>
 </ul>
 <?php
 } else {
