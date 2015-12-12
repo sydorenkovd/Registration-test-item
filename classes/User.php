@@ -59,4 +59,7 @@ return false;
     public function isLoggedIn(){
         return $this->_isLoggedIn;
     }
+    public function logout(){
+        Session::delete($this->_sessionName);
+    }
 }
