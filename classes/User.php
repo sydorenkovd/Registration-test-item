@@ -74,6 +74,14 @@ return false;
         }
         return false;
     }
+    public function update($fields = [], $id = null){
+        if(!$id && $this->isLoggedIn()){
+            $id = $this->data()->id;
+        }
+        if(!$this->_db->update('users', $id, $fields)){
+        throw new Exception('there was a problem updating');
+        }
+    }
     public function data(){
         return $this->_data;
     }

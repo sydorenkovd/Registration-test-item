@@ -11,6 +11,7 @@ if($user->isLoggedIn()){
     <p>Hello, <a href="#"><?= $user->data()->username?></a></p>
 <ul>
     <li>You can <a href="logout.php">log out</a> here!</li>
+    <li>You can <a href="update.php">update</a> your profile here!</li>
 </ul>
 <?php
 } else {
