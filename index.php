@@ -5,4 +5,15 @@ $user = DB::connect();
 if(Session::exists('home')){
     echo "<p><b>" . Session::flash('home') . "</b></p>";
 }
-echo Session::get(Config::get('session/session_name'));
+$user = new User();
+if($user->isLoggedIn()){
+    ?>
+    <p>Hello, <a href="#"><?= $user->data()->username?></a></p>
+<ul>
+    <li>You can <a href="logout.php">log out</a> here!</li>
+</ul>
+<?php
+} else {
+    echo "<p>You need to <a href='login.php'>log in</a> or <a href='register.php'>register</a>!" . "</p>";
+}
+ ?>
